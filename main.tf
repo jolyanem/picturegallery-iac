@@ -74,28 +74,3 @@ resource "azurerm_mysql_flexible_server_configuration" "ssl_config" {
   server_name         = azurerm_mysql_flexible_server.serverformation1.name
   value               = "OFF"
 }
-
-# Create MySQL Server 
-resource "azurerm_mysql_flexible_server" "serverformation1" { 
-name    =  "sqlserver" # add your name to make it unique. Can only consist of lowercase letters and numbers, and must be between 3 and 24 characters long.
-
-location    =  var.location 
-resource_group_name  =  var.rg_name  
-administrator_login   =  "adminformation" 
-administrator_password =  "formationCodingGame0!"
- sku_name =  "B_Standard_B1ms" 
- version =  "8.0.21" 
- geo_redundant_backup_enabled = false 
- storage { 
-  auto_grow_enabled = false 
-  size_gb = 20 
-  io_scaling_enabled = false 
-  iops = 360
-  }
-} 
-resource "azurerm_mysql_flexible_server_configuration" "ssl_config" {
-  name                = "require_secure_transport"
-  resource_group_name = var.rg_name
-  server_name         = azurerm_mysql_flexible_server.serverformation1.name
-  value               = "OFF"
-}
