@@ -62,7 +62,7 @@ resource "azurerm_mysql_flexible_database" "mysqldb1" {
 
 # Create MySQL Server 
 resource "azurerm_mysql_flexible_server" "serverformation1" { 
-name    =  "sqlserver" # add your name to make it unique. Can only consist of lowercase letters and numbers, and must be between 3 and 24 characters long.
+name    =  "sqlserver-jm" # add your name to make it unique. Can only consist of lowercase letters and numbers, and must be between 3 and 24 characters long.
 
 location    =  var.location 
 resource_group_name  =  var.rg_name  
