@@ -10,7 +10,8 @@ variable "tenant_id" {
 # You can find it in the Azure portal under "Subscriptions" > "Subscription ID". Details below.
 variable "subscription_id" { 
  type = string 
- default = "4dbffbb6-92ea-4699-bba4-5c52b58301ff" } #TO BE FILLED  
+ default = "4dbffbb6-92ea-4699-bba4-5c52b58301ff" 
+} #TO BE FILLED  
 
 # Define a variable for the resource group name associated with your personal sandbox.
 # A resource group is a container that holds related Azure resources.
